@@ -2,20 +2,16 @@ import React from "react";
 import Item from "./Item";
 
 class ShoppingList extends React.Component {
-  // const [selectedCategory, setSelectedCategory] = useState("All");
   state = {
     selectedCategory: "All",
   };
 
   handleCategoryChange = (event) => {
-    // event.target.value will be the value selected by the user
-    // setSelectedCategory(event.target.value);
     this.setState({
       selectedCategory: event.target.value,
     });
   };
 
-  // we want to filter the items to only display the ones based on the selected category
   render() {
     const itemsToDisplay = this.props.items.filter((item) => {
       if (this.state.selectedCategory === "All") return true;

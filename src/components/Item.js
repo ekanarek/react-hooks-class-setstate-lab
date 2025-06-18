@@ -1,13 +1,11 @@
 import React from "react";
 
 class Item extends React.Component {
-  // const [isInCart, setIsInCart] = useState(false);
   state = {
     isInCart: false,
   };
 
   handleAddToCartClick = () => {
-    // setIsInCart((isInCart) => !isInCart);
     this.setState({
       isInCart: !this.state.isInCart,
     });
